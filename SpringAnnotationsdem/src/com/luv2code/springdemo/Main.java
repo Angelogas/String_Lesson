@@ -10,9 +10,13 @@ public class Main {
             new ClassPathXmlApplicationContext("applicationContext.xml");
     // get the beam from spring container
     Coach theCoach = (TennisCoach) context.getBean("tennisCoach");
+    Coach secondCoach = (SwimCoach) context.getBean("swimCoach");
 
     // call the method on the bean
+        System.out.println(theCoach.getDailyFortune());
         System.out.println(theCoach.getDailyWorkout());
+        System.out.println(((SwimCoach) secondCoach).getEmail());
+
 
     context.close();
     }
