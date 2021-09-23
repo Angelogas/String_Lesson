@@ -16,12 +16,12 @@ public class Main {
 
     // get the beam from spring container
     Coach theCoach = (TennisCoach) context.getBean("tennisCoach");
-    Coach secondCoach = (SwimCoach) context.getBean("swimCoach");
+    SwimCoach secondCoach = (SwimCoach) context.getBean("swimCoach");
 
     // call the method on the bean
         System.out.println(theCoach.getDailyFortune());
         System.out.println(theCoach.getDailyWorkout());
-        System.out.println(((SwimCoach) secondCoach).getEmail());
+        System.out.println(secondCoach.getEmail());
 
     context.close();
         System.out.println("End of the Program");
