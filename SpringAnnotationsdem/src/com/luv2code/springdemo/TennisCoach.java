@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TennisCoach implements Coach{
     @Autowired
-    @Qualifier ("happyFortuneService")
+    @Qualifier ("fileFortuneService")
     private FortuneService fortuneService;
 
 //    @Autowired
@@ -25,13 +25,13 @@ public class TennisCoach implements Coach{
 //    }
 
     @Autowired
-    public TennisCoach(@Qualifier("randomFortuneService") FortuneService theFortuneService) {
+    public TennisCoach(@Qualifier("happyFortuneService") FortuneService theFortuneService) {
         System.out.println("Now in TennisCoach constructor");
         this.fortuneService = theFortuneService;
     }
 
-    @Autowired
-    @Qualifier ("randomFortuneService")
+
+//    @Qualifier ("randomFortuneService")
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println("Inside Setter Injection");
         this.fortuneService = fortuneService;

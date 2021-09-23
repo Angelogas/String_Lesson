@@ -17,7 +17,6 @@ public class Main {
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(((SwimCoach) secondCoach).getEmail());
 
-
     context.close();
     }
 }
