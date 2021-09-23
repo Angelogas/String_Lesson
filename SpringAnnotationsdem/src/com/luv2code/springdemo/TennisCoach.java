@@ -19,7 +19,7 @@ import javax.annotation.PreDestroy;
 @Component
 @Scope ("prototype")
 public class TennisCoach implements Coach{
-    @Autowired
+//    @Autowired
     @Qualifier ("fileFortuneService")
     private FortuneService fortuneService;
 
@@ -29,8 +29,8 @@ public class TennisCoach implements Coach{
 //        fortuneService = theFortuneService;
 //    }
 
-    @Autowired
-    public TennisCoach(@Qualifier("happyFortuneService") FortuneService theFortuneService) {
+//    @Autowired
+    public TennisCoach(/*@Qualifier("happyFortuneService")*/ FortuneService theFortuneService) {
         System.out.println("Now in TennisCoach constructor");
         this.fortuneService = theFortuneService;
     }
@@ -53,7 +53,7 @@ public class TennisCoach implements Coach{
         this.fortuneService = fortuneService;
     }
 
-    @Autowired
+//    @Autowired
     @Qualifier ("happyFortuneService")
     public void DoSomeCrazyStuffs(FortuneService fortuneService) {
         System.out.println("Now in the DoSomeCrazyStuff Method of TennisCoach");
