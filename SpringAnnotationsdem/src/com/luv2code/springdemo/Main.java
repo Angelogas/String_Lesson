@@ -18,6 +18,8 @@ public class Main {
     Coach theCoach = (TennisCoach) context.getBean("tennisCoach");
     SwimCoach secondCoach = (SwimCoach) context.getBean("swimCoach");
 
+
+
     // call the method on the bean
         System.out.println(theCoach.getDailyFortune());
         System.out.println(theCoach.getDailyWorkout());
@@ -25,6 +27,13 @@ public class Main {
 
     context.close();
         System.out.println("End of the Program");
+
+        AnnotationConfigApplicationContext context7 =
+                new AnnotationConfigApplicationContext(ConfigClassForQuestion7.class);
+        Coach lastCoach = context7.getBean("lastCoach", Coach.class);
+
+        System.out.println(lastCoach.getDailyFortune());
+        context7.close();
     }
 
 }

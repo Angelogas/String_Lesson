@@ -20,7 +20,7 @@ import javax.annotation.PreDestroy;
 @Scope ("prototype")
 public class TennisCoach implements Coach{
 //    @Autowired
-    @Qualifier ("fileFortuneService")
+//    @Qualifier ("fileFortuneService")
     private FortuneService fortuneService;
 
 //    @Autowired
